@@ -1,0 +1,94 @@
+; TECkit mapping for TeX input conventions <-> Unicode characters
+
+LHSName "Latin Unicode"
+RHSName "Mongolian Cyrillic Unicode"
+
+
+pass(Unicode)
+
+; ligatures from Knuth's original CMR fonts
+U+0027 U+0027   <>  U+201D  ; '' -> right double quote
+U+0022           >  U+201D  ; " -> right double quote
+U+0060 U+0060   <>  U+201C  ; `` -> left double quote
+
+;; DIGITS
+U+0030 	<>	U+1810	; 0
+U+0031 	<>	U+1811	; 1	
+U+0032 	<>	U+1812	; 2	
+U+0033 	<>	U+1813	; 3	
+U+0034 	<>	U+1814	; 4	
+U+0035 	<>	U+1815	; 5	
+U+0036 	<>	U+1816	; 6	
+U+0037 	<>	U+1817	; 7	
+U+0038 	<>	U+1818	; 8	
+U+0039 	<>	U+1819	; 9	
+
+;; VOWELS
+
+U+0061 	<>	U+1820	; a
+U+0065 	<>	U+1821	; e	
+U+0069 	<>	U+1822	; i	
+U+006F 	<>	U+1823	; o	
+U+0075 	<>	U+1824	; u	
+U+006F U+0065 	<>	U+1825	; oe	
+U+00F6 	<>	U+1825	; ö	
+U+0075 U+0065 	<>	U+1826	; ue	
+U+00FC 	<>	U+1826	; ü	
+U+0065 U+0065 	<>	U+1827	; ee	
+U+0113 	<>	U+1827	; ē	
+U+00E9 	<>	U+1827	; é	
+
+;; CONSONANTS
+
+U+006E 	<>	U+1828	; n
+U+006E U+0067 	<>	U+1829	; ng
+U+014B 	<>	U+1829	; ŋ
+U+0062 	<>	U+182a	; b
+U+0070 	<>	U+182b	; p
+U+0071 	<>	U+182c	; q
+U+0067 	<>	U+182d	; g
+U+006D 	<>	U+182e	; m
+U+006C 	<>	U+182f	; l
+U+0073 	<>	U+1830	; s
+U+0073 U+0068 	<>	U+1831	; sh
+U+0161 	<>	U+1831	; š
+U+0074 	<>	U+1832	; t
+U+0064 	<>	U+1833	; d
+U+0063 U+0068 	<>	U+1834	; ch
+U+010D 	<>	U+1834	; č
+U+006A 	<>	U+1835	; j
+U+01F0 	<>	U+1835	; ǰ
+U+0079 	<>	U+1836	; y
+U+0072 	<>	U+1837	; r
+U+0077 	<>	U+1838	; w
+U+0066 	<>	U+1839	; f
+U+006B 	<>	U+183a	; k
+U+006B U+0068 	<>	U+183b	; kh
+U+0074 U+0073 	<>	U+183c	; ts
+U+0063 	<>	U+183c	; c
+U+007A 	<>	U+183d	; z
+U+0068 	<>	U+183e	; h
+U+007A U+0072 	<>	U+183f	; zr
+U+017E 	<>	U+183f	; ž
+U+006C U+0068 	<>	U+1840	; lh
+U+005A U+0048 	<>	U+1841	; ZH
+U+0043 U+0048 	<>	U+1842	; CH
+
+;; PUNCTUATION
+
+U+003C 	<>	U+1800	; < initial mark
+U+002E U+002E U+002E 	<>	U+1801	; ... ellipsis
+U+002C 	<>	U+1802	; , comma
+U+002E 	<>	U+1803	; . full stop
+U+003A 	<>	U+1804	; : colon
+U+003E 	<>	U+1805	; > chapter end
+U+002D 	<>	U+180a	; - nirugu
+
+;; FORMAT CONTROL
+U+002A 	<>	U+180b					; * 	Free var selector 1
+U+002A U+002A 	<>	U+180c			; ** 	Free var selector 2
+U+002A U+002A U+002A 	<>	U+180d	; *** 	Free var selector 3
+U+002B 	<>	U+180e					; + 	vowel separator
+U+007C 	<>	U+202f					; | 	narrow no-break space
+
+

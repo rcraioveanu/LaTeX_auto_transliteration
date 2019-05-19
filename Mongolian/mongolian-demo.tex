@@ -1,0 +1,285 @@
+\documentclass{article}
+
+\usepackage{xunicode,xltxtra}
+\usepackage{fontspec}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{longtable}
+
+\setmainfont[BoldFont = *]{EB Garamond}
+\newfontfamily{\mbichig}[Script=Mongolian,Mapping=mongolian-bichig]{Noto Sans Mongolian}
+\newfontfamily{\mcyr}[Mapping=mongolian-cyrillic]{EB Garamond}
+
+\newcommand{\reset}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
+
+\newcommand{\mb}[1]{{\mbichig #1}}
+\newcommand{\mbv}[1]{\rotatebox{-90}{\mbichig #1}}
+\newsavebox{\mong}
+
+\begin{document}
+
+%\section{Mongol Bichig transliteration}
+
+\begin{multicols}{3}
+	\raggedbottom
+	
+	\renewcommand{\arraystretch}{1.3}
+	\centering
+
+{ \Large \bfseries Numbers }
+
+\begin{tabular}[t]{
+		>{\mbichig\begin{lrbox}{\mong}} c <{\end{lrbox}%
+			\rotatebox[origin=c]{-90}{\usebox{\mong}}}
+		c
+		}
+\toprule
+\reset{\textsc{Bichig}} & \textsc{Arabic} \\
+\midrule
+0 & 0  \\
+1 & 1  \\
+2 & 2  \\
+3 & 3  \\
+4 & 4  \\
+5 & 5  \\
+6 & 6  \\
+7 & 7  \\
+7 & 7  \\
+9 & 9  \\
+\bottomrule
+\end{tabular}
+
+\bigskip
+
+
+{ \Large \bfseries Punctuation }
+
+\begin{tabular}[t]{
+		*{2}{
+		>{\mbichig\begin{lrbox}{\mong}} c <{\end{lrbox}%
+			\rotatebox[origin=c]{-90}{\usebox{\mong}}}
+		}
+		*{2}{c}
+		l
+		}
+\toprule
+\multicolumn{2}{c}{\textsc{Bichig}} & \multicolumn{2}{c}{\textsc{Trans.}} \\
+\midrule
+< & <* & < & <* & \P\ begin  \\
+<** & <***  & <** & <*** & \P\ begin  \\
+, & & , & \\
+. & & . &  \\
+: & & : &  \\
+... & & ... &  \\
+> & & > & & \P\ end \\
+- & & - & & extender \\
+| & & | & & vowel break \\
+\bottomrule
+\end{tabular}
+
+\bigskip 
+
+{ \Large \bfseries Bichig Vowels }
+
+\begin{tabular}[t]{
+		>{\mbichig\begin{lrbox}{\mong}} c <{\end{lrbox}%
+			\rotatebox[origin=c]{-90}{\usebox{\mong}}}
+		c
+		c}
+\toprule
+\reset{\textsc{Bichig}} & \textsc{ASCII} & \textsc{Alt.} \\
+\midrule
+a & a  \\
+e & e  \\
+i & i  \\
+o & o  \\
+u & u  \\
+oe & oe & ö  \\
+ue & ue & ü  \\
+ee & ee & ē, é \\
+ \bottomrule
+\end{tabular}
+
+
+\columnbreak
+
+{ \Large \bfseries Bichig Consonants }
+
+\begin{tabular}[t]{
+		>{\mbichig\begin{lrbox}{\mong}} c <{\end{lrbox}%
+			\rotatebox[origin=c]{-90}{\usebox{\mong}}}
+		c
+		c}
+\toprule
+\reset{\textsc{Bichig}} & \textsc{ASCII} & \textsc{Alt.} \\
+\midrule
+n & n  \\
+ng & ng & ŋ  \\
+b & b  \\
+p & p  \\
+q & q  \\
+g & g  \\
+m & m  \\
+l & l & \\
+s & s & \\
+sh & sh & š \\
+t & t & \\
+d & d & \\
+ch & ch & č \\
+j & j & ǰ \\
+y & y & \\
+r & r & \\
+w & w & \\
+f & f & \\
+k & k & \\
+kh & kh & \\
+ts & ts & c \\
+z & z & \\
+h & h & \\
+zr & zr & ž \\
+lh & lh & \\
+ZH & ZH & \\
+CH & CH & \\
+ \bottomrule
+\end{tabular}
+
+\bigskip
+
+{ \Large \bfseries Alternates }
+
+\begin{tabular}[t]{
+		*{3}{
+		>{\mbichig\begin{lrbox}{\mong}} c <{\end{lrbox}%
+			\rotatebox[origin=c]{-90}{\usebox{\mong}}}
+		}
+		*{3}{c}
+		}
+\toprule
+\multicolumn{3}{c}{\textsc{Bichig}} & \multicolumn{3}{c}{\textsc{Trans.}} \\
+\midrule
+a & a* & a** & a & a* & a**   \\
+ü & ü* & &  ue & ue* &  \\
+q & q* & q**  & q & q* & q**  \\
+g & g* & &  g & g* \\
+j & j* & &  j & j* &  \\
+\bottomrule
+\end{tabular}
+
+\columnbreak
+
+{ \Large \bfseries Cyrillic }
+
+\begin{tabular}[t]{ >{\mcyr}c cc cc }
+\toprule
+\reset{\textsc{Cyrillic}} & \mc{2}{c}{\textsc{ASCII}} & \mc{2}{c}{Alt.} \\
+\midrule
+a & a \\
+ae & ae \\
+b & b  \\
+w & w & v \\
+g & g  \\
+d & d & \\
+ye & ye & ee & ē & é  \\
+yo & yo & & ë \\
+j & j & zh & ž & ǰ \\
+dj & dj \\
+z & z \\
+i & i \\
+y & y & & ǐ \\
+k & k & \\
+l & l & \\
+m & m  \\
+n & n  \\
+o & o \\
+oe & oe & & ö & ô \\
+ŋ & & & ŋ  \\
+p & p  \\
+r & r & \\
+s & s & \\
+t & t & \\
+u & u \\
+ue & ue & & ü \\
+f & f & \\
+x & x & kh  \\
+h & h & \\
+ts & ts & c \\
+ch & ch & & č \\
+sh & sh & & š \\
+shch & shch & & ŝ & šč  \\
+'' & '\,' & " & ı \\
+' & ' \\
+ei & ei & ii \\
+e & e & & è & ê \\
+yu & yu \\
+ya & ya \\
+ \bottomrule
+\end{tabular}
+
+\end{multicols}
+
+
+\clearpage
+
+\section{Sample Words}
+
+\begin{center}
+
+\begin{longtable}[t]{
+		>{\mbichig\begin{lrbox}{\mong}} c <{\end{lrbox}%
+			\rotatebox[origin=c]{-90}{\usebox{\mong}}}
+		c
+ 		>{\mcyr}c 
+		c
+		>{\itshape}c}
+\toprule
+\reset{\textsc{Bichig}} & \textsc{ASCII} & \reset{\textsc{Cyrillic}} & \textsc{ASCII} & \reset{\textsc{Gloss}} \\
+\midrule
+qele & qele & xel & xel & language \\
+\midrule
+ulus & ulus & uls & uls & country \\
+\midrule
+agula & agula & uul & uul & mountain \\
+\midrule
+toeruel & toeruel & toeroel & toeroel & house \\
+\midrule
+buergued & buergued & buerged & buerged & eagle \\
+\midrule
+bogshurg|a & bogshurg+a & bogshirgo & bogshirgo & sparrow \\
+\midrule
+qabtagai & qabtagai & xawtgay & xawtgay & Bactrian camel \\
+\midrule
+sorgug boeqeng & sorgug boeqeng & sorgog boexoen & sorgog boexoen & saiga antelope \\
+\midrule
+qirsa & qirsa & xyars & xyars & steppe fox \\
+\midrule
+irbis & irbis & irwes & irves & snow leopard \\
+\midrule
+sibuer qilim|e & sibuer qilim+e  & shiver xilem & shiver xilem & Siberian sturgeon \\
+\midrule
+yanggir & yanggir & yangir & yangir & Siberian ibex \\
+\midrule
+qusi & qusi & xush & xush & Siberian pine \\
+\midrule
+jag & jag & zag & zag & saxaul \\
+\midrule
+tulu & tulu & tul & tul & taimen \\
+\midrule
+qulu|du jigasu & qulu|du jigasu & xuld zagas & xuld zagas & trout \\
+\midrule
+nara & nara & nar & nar & sun \\
+\bottomrule
+\end{longtable}
+
+\end{center}
+
+\section{In-line use}
+
+Words can be horizontal like \mb{sorgug boeqeng} or droopily vertical like \mbv{sibuer qilim+e}.
+
+
+\end{document}
