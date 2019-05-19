@@ -4,6 +4,18 @@ This repository provides a set of mappings of ASCII characters to non-Roman writ
 
 Note that this transliteration requires use of the `fontspec` package, and therefore requires use of XeLaTeX or LuaLaTeX.
 
+The transliteration is provided by the `.map` file, which needs to be in the same folder as the `.tex` file (or otherwise findable in the TeX directory structure). The transliteration is specified with `Mapping=` in the optional arguments of the `\newfontfamily` command:
+
+```latex
+\newfontfamily{\nameofcommand}[Mapping=/path/to/map/file]{Fontname} 
+```
+
+For instance, for Hebrew, you'd specify a new font family command, pick your favourite Hebrew font, and point XeLaTex at the `hebrew.map` file (in the same directory, in this example):
+
+```latex
+\newfontfamily{\hebrew}[Scale=1,Mapping=hebrew]{Ezra SIL} 
+```
+
 ## Currently implemented, with documentation
 
 Mongolian (Bichig and Cyrillic)
