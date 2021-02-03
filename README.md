@@ -18,7 +18,7 @@ For instance, for Mongolian, you'd specify a new font family command, pick your 
 \newfontfamily{\mongolian}[Scale=1,Script=Mongolian,Mapping=mongolian-bichig]{Noto Sans Mongolian} 
 ```
 
-Then, using the `\mongolian` command will both change the font to Noto Sans Mongolian and automatically transliterate any text typed: `sorgug` will be output as ᠰᠣᠷᠭᠤᠭ.
+Then, using the `\mongolian` command will reformat all following text, both changing the font to Noto Sans Mongolian and automatically transliterating any text typed: `sorgug` will be typeset as ᠰᠣᠷᠭᠤᠭ.
 
 
 ## Currently implemented, with documentation
@@ -31,11 +31,17 @@ Arabic
 
 Aramaic
 
+Armenian
+
 Balinese
 
 Brahmi
 
 Burmese
+
+Canadian Aboriginal Syllabics
+
+Cherokee
 
 Egyptian hieroglyphics
 
@@ -53,6 +59,8 @@ N'Ko
 
 Old Persian
 
+Runic
+
 Sgaw Karen
 
 Sundanese
@@ -60,6 +68,8 @@ Sundanese
 Syriac
 
 Tibetan
+
+Tifinagh
 
 Ugaritic
 
